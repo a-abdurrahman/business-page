@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { coffee } from "../assets/photos";
+import { icedTea } from "../assets/photos";
 
 export default function AboutPage() {
   return (
@@ -14,18 +14,19 @@ export default function AboutPage() {
             <div className="">
               <h2 className="font-semibold text-5xl italic mb-8">About Us</h2>
               <p className="text-xl italic ">
-                From humble beginnings, hidden away in Smeaton Grange, Dizy's
-                has evolved into an island escape within The HUB of Gregory
-                Hills. This transformation has turned Dizy's into a vibrant
-                oasis, offering a serene retreat from the everyday hustle and
-                bustle.{" "}
+                Nestled in the heart of the bustling city, our cold drink shop
+                is a sanctuary for those looking for a refreshing drink.
+                Specializing in a iced teas, we pride ourselves on crafting
+                beverages that are as pure as they are delicious. Our commitment
+                to health and quality means that every drink we serve is free
+                from artificial sweeteners, coloring, and preservatives.{" "}
                 <p className="md:block hidden mt-8">
-                  Nestled in the heart of the community, Dizy's provides a
-                  perfect blend of relaxation and indulgence, making it an ideal
-                  destination to unwind and enjoy your time. Whether you're
-                  seeking a peaceful refuge or a lively social spot, Dizy's
-                  caters to all, inviting guests to experience a slice of
-                  paradise in the bustling city.
+                  Instead, we rely on the natural sweetness of carefully
+                  selected teas and the vibrant flavors of fresh, organic
+                  ingredients. Whether you're craving a classic iced black tea,
+                  or a fruity iced lemon tea, our shop
+                  offers a revitalizing escape with each sip, making it the
+                  perfect place to chill and rejuvenate.
                 </p>
               </p>
             </div>
@@ -33,14 +34,11 @@ export default function AboutPage() {
         </div>
         <div className="flex grow lg:max-w-[50%] max-w-full justify-center items-center">
           <img
-            src={coffee}
+            src={icedTea}
             alt=""
             className="object-contain lg:object-bottom object-center"
           />
         </div>
-      </div>
-      <div className="flex basis-[100vh]">
-
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function LinkList({handleClose}) {
+export default function LinkList({ handleClose }) {
   return (
     <>
       <NavLink to={"/"}>
@@ -11,6 +11,12 @@ export default function LinkList({handleClose}) {
       </NavLink>
       <NavLink to={"/booking"}>
         <p onClick={handleClose}>Booking</p>
+      </NavLink>
+      <NavLink to={"/locations"}>
+        <p>Locations</p>
+      </NavLink>
+      <NavLink to={"/feedback"}>
+        <p>Feedback</p>
       </NavLink>
     </>
   );

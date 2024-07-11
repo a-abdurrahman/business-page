@@ -34,8 +34,11 @@ export default function Header() {
         <NavLink to={"/about"}>
           <p>About Us</p>
         </NavLink>
-        <NavLink to={"/booking"}>
-          <p>Booking</p>
+        <NavLink to={"/locations"}>
+          <p>Locations</p>
+        </NavLink>
+        <NavLink to={"/feedback"}>
+          <p>Feedback</p>
         </NavLink>
       </div>
 

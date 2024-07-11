@@ -3,6 +3,8 @@ import RootLayout from "./RootLayout"
 import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import BookingPage from "./pages/BookingPage"
+import MenuPage from "./pages/MenuPage"
+import FeedbackPage from "./pages/FeedbackPage"
 
 
 function App() {
@@ -13,8 +15,10 @@ function App() {
         element: <RootLayout />,
         children: [
           { index:true , element: <HomePage /> },
+          { path:"menu", element: <MenuPage/>},
           { path:"about", element: <AboutPage/>},
           { path:"booking", element: <BookingPage/>},
+          { path:"feedback", element: <FeedbackPage/>},
         ],
       },
     ]
