@@ -20,14 +20,14 @@ export default function AboutPage() {
                 beverages that are as pure as they are delicious. Our commitment
                 to health and quality means that every drink we serve is free
                 from artificial sweeteners, coloring, and preservatives.{" "}
-                <p className="md:block hidden mt-8">
+                <span className="md:block hidden mt-8">
                   Instead, we rely on the natural sweetness of carefully
                   selected teas and the vibrant flavors of fresh, organic
                   ingredients. Whether you're craving a classic iced black tea,
                   or a fruity iced lemon tea, our shop
                   offers a revitalizing escape with each sip, making it the
                   perfect place to chill and rejuvenate.
-                </p>
+                </span>
               </p>
             </div>
           </div>

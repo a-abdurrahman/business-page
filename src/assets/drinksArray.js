@@ -42,7 +42,7 @@ const drinksArray = [
     image: "lemonade",
     smPrice: "10.000",
     lgPrice: "12.000",
-    desc: "Lemonade is a classicbeverage made from lemon juice, water, and sugar, served over ice for a thirst-quenching experience.",
+    desc: "Lemonade is a classic beverage made from lemon juice, water, and sugar, served over ice for a thirst-quenching experience.",
   },
 ];
 

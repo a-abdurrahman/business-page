@@ -10,7 +10,7 @@ export default function DrinkCard({drink}) {
         <h3 className=" font-medium text-base">
           {drink.name}
         </h3>
-        <p className="line-clamp-3">{drink.desc}</p>
+        <p className="line-clamp-3 overflow-y-auto">{drink.desc}</p>
         <div className="grid grid-cols-2">
             <div className=" flex flex-col items-center">
                 <p className="font-medium">Small</p>
