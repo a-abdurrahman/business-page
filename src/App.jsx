@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage"
 import BookingPage from "./pages/BookingPage"
 import MenuPage from "./pages/MenuPage"
 import FeedbackPage from "./pages/FeedbackPage"
+import FeedbackDisplayPage from "./pages/FeedbackDisplayPage"
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           { path:"about", element: <AboutPage/>},
           { path:"booking", element: <BookingPage/>},
           { path:"feedback", element: <FeedbackPage/>},
+          { path:"feedback-display", element: <FeedbackDisplayPage/>},
         ],
       },
     ]

@@ -1,14 +1,30 @@
 import TextArea from "antd/es/input/TextArea";
 import CustomInput from "../components/CustomInput";
-import { Button, Form, Input, Upload } from "antd";
+import { Button, Checkbox, Form, Input, Upload } from "antd";
 import { HiOutlinePlus } from "react-icons/hi2";
+import { useEffect, useState } from "react";
+import uniqid from 'uniqid';
 
 export default function FeedbackPage() {
+  const [formData, setFormData] =  useState()
+
+  useEffect(() => {
+    if (formData) {
+      localStorage.setItem( 'reviews', JSON.stringify(formData))
+    }
+    console.log(formData)
+  }, [formData])
+
+  function onFinish(e) {
+    setFormData({id:uniqid(), ...e})
+  }
   return (
     <div className="px-10 py-14 flex grow lg:h-screen h-[95vh]">
       <Form
         layout="vertical"
         className="flex grow flex-col px-5 py-7 bg-white rounded-lg"
+        name="feedbackForm"
+        onFinish={onFinish}
       >
         <Form.Item
           label="Name"
@@ -23,6 +39,12 @@ export default function FeedbackPage() {
           <Input />
         </Form.Item>
         <Form.Item
+          name="displayName"
+          valuePropName="checked"
+        >
+          <Checkbox>Agree to display your name in the review</Checkbox>
+        </Form.Item>
+        <Form.Item
           label="Email"
           name="email"
           rules={[
@@ -34,7 +56,7 @@ export default function FeedbackPage() {
         >
           <Input type="email" />
         </Form.Item>
-        <Form.Item
+        {/* <Form.Item
           label="Photo"
           name="photo"
           rules={[
@@ -44,13 +66,13 @@ export default function FeedbackPage() {
             },
           ]}
         >
-          <Upload listType="picture-card">
+          <Upload listType="picture-card" name="tea-photo" action={}>
             <button style={{ border: 0, background: "none" }} type="button" className="flex flex-col justify-center items-center max-h-10">
               <HiOutlinePlus size={20}/>
               Upload
             </button>
           </Upload>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item
           label="Feedback"
