@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import uniqid from 'uniqid';
 
 export default function FeedbackPage() {
-  const [formData, setFormData] =  useState()
+  const [formData, setFormData] =  useState([])
 
   useEffect(() => {
     if (formData) {
@@ -16,7 +16,10 @@ export default function FeedbackPage() {
   }, [formData])
 
   function onFinish(e) {
-    setFormData({id:uniqid(), ...e})
+    setFormData((prevData)=>{
+      const updatedData = [...prevData, e]
+      return updatedData
+    })
   }
   return (
     <div className="px-10 py-14 flex grow lg:h-screen h-[95vh]">
